@@ -5,14 +5,13 @@ end
 
 packer.init({
     display = {
-        open_fn = function ()
+        open_fn = function()
             return require('packer.util').float({ border = "rounded" })
         end
     }
 })
 
 return packer.startup(function(use)
-
     -- Packer: Packer Manager
     use 'wbthomason/packer.nvim'
 
@@ -24,7 +23,8 @@ return packer.startup(function(use)
 
     -- Telescope: Fuzzy Finder
     use({
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }
     })
 
@@ -32,6 +32,7 @@ return packer.startup(function(use)
     use "ellisonleao/gruvbox.nvim"
     -- use { "catppuccin/nvim", as = "catppuccin" }
     -- use 'folke/tokyonight.nvim'
+    -- use 'sainnhe/gruvbox-material'
 
     -- File Tree
     use {
@@ -39,7 +40,7 @@ return packer.startup(function(use)
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+        tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
     }
 
     -- Commenter
@@ -94,4 +95,22 @@ return packer.startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
+
+    -- Flutter Tools
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = 'nvim-lua/plenary.nvim'
+    }
+
+    -- Trouble plugin
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {}
+        end
+    }
+
+    -- Copilot
+    use 'github/copilot.vim'
 end)

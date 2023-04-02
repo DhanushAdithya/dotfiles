@@ -5,6 +5,4 @@ vim.cmd [[
     augroup end
 ]]
 
-vim.cmd [[
-
-]]
+vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.format()]]

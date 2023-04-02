@@ -13,6 +13,8 @@ vim.keymap.set('n', 'J', 'mzJ`z', {})
 -- vim.keymap.set('i', '"', '""<Left>', {})
 -- vim.keymap.set('i', '\'', '\'\'<Left>', {})
 
+vim.keymap.set("i", "<C-a>", "<cmd>call copilot#Accept()<CR>")
+
 vim.keymap.set("n", "K", "<nop>")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -55,8 +57,10 @@ vim.keymap.set('v', '<space>d', '"_d', {})
 
 -- " Telescope
 vim.keymap.set('n', '<Leader>ff',
-	':Telescope find_files sorting_strategy=ascending layout_config={"prompt_position":"top"}<CR>', { silent = true })
-vim.keymap.set('n', '<Leader>ov', ':Telescope find_files sorting_strategy=ascending layout_config={"prompt_position":"top"} cwd=~/.config/nvim/<CR>', { silent = true })
+    ':Telescope find_files sorting_strategy=ascending layout_config={"prompt_position":"top"}<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>ov',
+    ':Telescope find_files sorting_strategy=ascending layout_config={"prompt_position":"top"} cwd=~/.config/nvim/<CR>',
+    { silent = true })
 
 vim.keymap.set('n', '<Tab>', 'gt<CR>', {})
 vim.keymap.set('n', '<S-Tab>', 'gT<CR>', {})

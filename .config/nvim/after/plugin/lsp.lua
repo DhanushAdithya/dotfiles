@@ -10,19 +10,19 @@ lsp.ensure_installed({
 })
 
 require('lspconfig').clangd.setup {}
-require('lspconfig').sumneko_lua.setup {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            },
-            workspace = {
-                library = vim.api.nvim_get_runtime_file('', true),
-                checkThirdParty = false
-            }
-        }
-    }
-}
+-- require('lspconfig').sumneko_lua.setup {
+--     settings = {
+--         Lua = {
+--             diagnostics = {
+--                 globals = { 'vim' }
+--             },
+--             workspace = {
+--                 library = vim.api.nvim_get_runtime_file('', true),
+--                 checkThirdParty = false
+--             }
+--         }
+--     }
+-- }
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
