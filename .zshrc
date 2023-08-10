@@ -13,6 +13,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 	git
 	zsh-autosuggestions
+    virtualenv
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -32,6 +33,17 @@ alias :q="exit"
 alias df='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 source ~/.aliases
 mk(){mkdir $1 && cd $1}
+cc(){gcc $1 -o $1.out && ./$1.out && rm $1.out}
+cppc(){g++ $1 -o $1.out && ./$1.out && rm $1.out}
+jcc(){javac $1 && java $1 && rm $1.class}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# if [ -f '/c/Users/sdhan/anaconda3/Scripts/conda.exe' ]; then
+#     eval "$('/c/Users/sdhan/anaconda3/Scripts/conda.exe' 'shell.zsh' 'hook')"
+# fi
+# <<< conda initialize <<<
+
