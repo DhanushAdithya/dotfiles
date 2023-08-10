@@ -113,4 +113,9 @@ return packer.startup(function(use)
 
     -- Copilot
     use 'github/copilot.vim'
+
+    -- Terminal
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
 end)
