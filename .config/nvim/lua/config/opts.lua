@@ -20,6 +20,7 @@ vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
 vim.opt.swapfile = false
 vim.opt.ro = false
+vim.opt.rnu = true
 -- vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
