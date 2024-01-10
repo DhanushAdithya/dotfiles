@@ -7,7 +7,7 @@ opts.expandtab = true
 
 opts.smartindent = true
 
-opts.wrap = false
+opts.wrap = true
 
 opts.hlsearch = false
 opts.incsearch = true

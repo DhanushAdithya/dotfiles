@@ -3,6 +3,7 @@ local M = {}
 
 M.ui = {
 	theme = "gruvchad",
+	theme_toggle = { "gruvchad", "onedark" },
 	statusline = {
 		theme = "default",
 		separator_style = "block",
