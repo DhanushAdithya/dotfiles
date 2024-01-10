@@ -40,6 +40,11 @@ local plugins = {
 		requires = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("gitsigns").setup({
+				signs = {
+					add = { text = "▌" },
+					change = { text = "▌" },
+				},
+				numhl = true,
 				current_line_blame = true,
 			})
 		end,
@@ -127,6 +132,10 @@ local plugins = {
 			vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
 			vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
 		end,
+	},
+	{
+		"tpope/vim-fugitive",
+		event = "VeryLazy",
 	},
 }
 

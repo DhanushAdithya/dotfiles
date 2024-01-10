@@ -32,6 +32,11 @@ opts.updatetime = 250
 
 vim.o.confirm = true
 
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+vim.api.nvim_set_hl(0, "GitSignsAdd", { bg = "none", fg = "#3c6fc2" })
+vim.api.nvim_set_hl(0, "GitSignsChange", { bg = "none", fg = "#ff9e64" })
+vim.api.nvim_set_hl(0, "GitSignsDelete", { bg = "none", fg = "#ff6c6b" })
+
 vim.api.nvim_create_autocmd("BufEnter", {
 	group = vim.api.nvim_create_augroup("NvimTreeClose", { clear = true }),
 	callback = function()
